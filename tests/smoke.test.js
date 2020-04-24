@@ -18,7 +18,7 @@ describe('Restana Web Framework - Smoke', () => {
       .get('/')
       .expect(200)
       .then((res) => {
-        expect(res.text).to.equal('Hello World!')
+        expect(res.text).to.equal('<h1>Hello from restana-static!</h1>')
         expect(res.headers['cache-control']).to.equal('public, no-cache, max-age=604800')
       })
   })
