@@ -1,0 +1,8 @@
+{
+    "port": 3000,
+    "cacheEnabled": true, 
+    "cacheControlHeaderValue": "public, no-cache, max-age=604800",
+    "distDirectory": "dist/",
+    "defaultFile": "index.html",
+    "logsFormat": "tiny"
+}
