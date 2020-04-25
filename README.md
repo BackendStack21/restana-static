@@ -19,6 +19,23 @@ The `/restana-static/config` directory should be populated/overwritten during im
 ```
 > File location : `/restana-static/config/default.json`
 
+### Environment configuration
+Optionally, you can overwrite each configuration entry using corresponding environment variables.
+```bash
+# port
+PORT 
+# cacheEnabled
+CACHE_ENABLED
+# cacheControlHeaderValue
+CACHE_CONTROL_HEADER_VALUE
+# distDirectory
+DIST_DIRECTORY
+# defaultFile
+DEFALUT_FILE
+# logsFormat
+LOGS_FORMAT
+```
+
 ## Adding static files
 The `/restana-static/dist` directory should be populated/overwritten during image creation. 
 > Please consider that default path will change if you overwrite the `distDirectory` config.

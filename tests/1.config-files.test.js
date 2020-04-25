@@ -4,7 +4,7 @@
 const expect = require('chai').expect
 const request = require('supertest')
 
-describe('Restana Web Framework - Smoke', () => {
+describe('Smoke - Config files', () => {
   let server
 
   it('should successfully start server', async () => {
