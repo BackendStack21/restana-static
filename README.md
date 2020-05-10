@@ -53,3 +53,19 @@ Allowed `logsFormat` values are described at: https://www.npmjs.com/package/morg
 
 ## Cache support
 Caching is provided by the module: https://www.npmjs.com/package/http-cache-middleware
+
+## Custom middlewares
+You can also introduce other features such as authentication, security protections, etc... by using custom middlewares.  
+You can just replace the `middlewares.js` file by your own configuration.  
+
+Default:
+```js 
+// custom middlewares set
+// this file is intended to be overwritten by final images
+const helmet = require('helmet')
+
+module.exports = [
+  helmet
+]
+```
+> Please note that the `helmet` middleware enabled by default. See more details here: https://www.npmjs.com/package/helmet

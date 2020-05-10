@@ -3,6 +3,7 @@ const files = require('serve-static')
 const path = require('path')
 const cache = require('http-cache-middleware')
 const morgan = require('morgan')
+const middlewares = require('./middlewares')
 
 module.exports = () => {
   // configuration
@@ -19,7 +20,7 @@ module.exports = () => {
     'dist/'
   const port = PORT || config.get('port') ||
     3000
-  const cacheEnabled = isCacheEnabled(CACHE_ENABLED, config)
+  const cacheEnabled = isEnabled(CACHE_ENABLED, 'cacheEnabled', config)
   const cacheControlHeaderValue = CACHE_CONTROL_HEADER_VALUE || config.get('cacheControlHeaderValue') ||
     'public, no-cache, max-age=604800'
   const defaultFile = DEFALUT_FILE || config.get('defaultFile') ||
@@ -47,6 +48,13 @@ module.exports = () => {
 
     return next()
   })
+
+  // supporting custom middlewares
+  for (const middleware of middlewares) {
+    server.use(middleware())
+  }
+
+  // supporting cache
   if (cacheEnabled) {
     server.use(cache())
   }
@@ -58,11 +66,11 @@ module.exports = () => {
   }
 }
 
-function isCacheEnabled (env, config) {
+function isEnabled (env, configKey, config) {
   if (env !== undefined) {
     if (env === 'true') return true
     else return false
   } else {
-    return config.get('cacheEnabled') || true
+    return config.get(configKey) || true
   }
 }

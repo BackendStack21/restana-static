@@ -7,6 +7,7 @@ COPY package.json .
 COPY package-lock.json .
 COPY index.js .
 COPY server.js .
+COPY middlewares.js .
 COPY config ./config
 COPY dist ./dist
 
