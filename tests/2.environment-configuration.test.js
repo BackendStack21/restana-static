@@ -10,6 +10,7 @@ describe('Smoke - Environment based configuration', () => {
   it('should successfully start server - env based config', async () => {
     process.env.PORT = 5000
     process.env.CACHE_ENABLED = false
+    process.env.LOGS_ENABLED = false
 
     const { server: service, port } = require('../server')()
 

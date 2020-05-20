@@ -20,6 +20,7 @@ The `/restana-static/config` directory should be populated/overwritten during im
     "cacheControlHeaderValue": "public, no-cache, max-age=604800",
     "distDirectory": "dist/",
     "defaultFile": "index.html",
+    "logsEnabled": true, 
     "logsFormat": "tiny"
 }
 ```
@@ -38,6 +39,8 @@ CACHE_CONTROL_HEADER_VALUE
 DIST_DIRECTORY
 # defaultFile
 DEFALUT_FILE
+# logsEnabled
+LOGS_ENABLED
 # logsFormat
 LOGS_FORMAT
 ```

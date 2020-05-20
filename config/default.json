@@ -4,5 +4,6 @@
     "cacheControlHeaderValue": "public, no-cache, max-age=604800",
     "distDirectory": "dist/",
     "defaultFile": "index.html",
+    "logsEnabled": true, 
     "logsFormat": "tiny"
 }
