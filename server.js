@@ -13,7 +13,8 @@ module.exports = () => {
     CACHE_ENABLED,
     CACHE_CONTROL_HEADER_VALUE,
     DEFALUT_FILE,
-    LOGS_FORMAT
+    LOGS_FORMAT,
+    LOGS_ENABLED
   } = process.env
 
   const distDirectory = DIST_DIRECTORY || config.get('distDirectory') ||
@@ -25,6 +26,7 @@ module.exports = () => {
     'public, no-cache, max-age=604800'
   const defaultFile = DEFALUT_FILE || config.get('defaultFile') ||
     'index.html'
+  const logsEnabled = isEnabled(LOGS_ENABLED, 'logsEnabled', config)
   const logsFormat = LOGS_FORMAT || config.get('logsFormat') ||
     'tiny'
 
@@ -40,7 +42,9 @@ module.exports = () => {
 
   // server bootstrap
   const server = require('restana')({})
-  server.use(morgan(logsFormat))
+  if (logsEnabled) {
+    server.use(morgan(logsFormat))
+  }
   server.use((req, res, next) => {
     if (req.url === '/') {
       req.url = defaultFile
