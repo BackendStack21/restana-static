@@ -1,6 +1,6 @@
 {
   "name": "restana-static",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Efficiently serve static files using Node.js and Docker containers.",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "helmet": "^3.22.0",
     "http-cache-middleware": "^1.3.5",
     "morgan": "^1.10.0",
-    "restana": "^4.5.0",
+    "restana": "^4.6.1",
     "serve-static": "^1.14.1"
   },
   "devDependencies": {
