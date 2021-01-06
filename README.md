@@ -38,7 +38,7 @@ CACHE_CONTROL_HEADER_VALUE
 # distDirectory
 DIST_DIRECTORY
 # defaultFile
-DEFALUT_FILE
+DEFAULT_FILE
 # logsEnabled
 LOGS_ENABLED
 # logsFormat
