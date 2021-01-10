@@ -12,7 +12,7 @@ module.exports = () => {
     PORT,
     CACHE_ENABLED,
     CACHE_CONTROL_HEADER_VALUE,
-    DEFALUT_FILE,
+    DEFAULT_FILE,
     LOGS_FORMAT,
     LOGS_ENABLED
   } = process.env
@@ -24,7 +24,7 @@ module.exports = () => {
   const cacheEnabled = isEnabled(CACHE_ENABLED, 'cacheEnabled', config)
   const cacheControlHeaderValue = CACHE_CONTROL_HEADER_VALUE || config.get('cacheControlHeaderValue') ||
     'public, no-cache, max-age=604800'
-  const defaultFile = DEFALUT_FILE || config.get('defaultFile') ||
+  const defaultFile = DEFAULT_FILE || config.get('defaultFile') ||
     'index.html'
   const logsEnabled = isEnabled(LOGS_ENABLED, 'logsEnabled', config)
   const logsFormat = LOGS_FORMAT || config.get('logsFormat') ||
