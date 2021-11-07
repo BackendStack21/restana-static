@@ -1,10 +1,9 @@
-FROM node:12-alpine 
+FROM node:16-alpine 
 
 RUN mkdir /restana-static
 WORKDIR /restana-static
 
 COPY package.json .
-COPY package-lock.json .
 COPY index.js .
 COPY server.js .
 COPY middlewares.js .
