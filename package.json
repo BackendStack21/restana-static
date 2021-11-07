@@ -1,6 +1,6 @@
 {
   "name": "restana-static",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Efficiently serve static files using Node.js and Docker containers.",
   "main": "index.js",
   "scripts": {
