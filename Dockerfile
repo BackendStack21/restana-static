@@ -1,4 +1,5 @@
 FROM node:16-alpine 
+RUN apk add --no-cache tini
 
 RUN mkdir /restana-static
 WORKDIR /restana-static
@@ -12,5 +13,6 @@ COPY dist ./dist
 
 RUN npm install --production
 
+ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["node", "index.js"]
 
