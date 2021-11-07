@@ -75,6 +75,6 @@ function isEnabled (env, configKey, config) {
     if (env === 'true') return true
     else return false
   } else {
-    return config.get(configKey) || true
+    return config.has(configKey) ? config.get(configKey) : true
   }
 }
