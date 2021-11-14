@@ -2,9 +2,9 @@
 name: 'build images'
 
 on:
+  release:
+    types: [published]
   push:
-    release:
-      types: [published]
     branches:
       - master
 
