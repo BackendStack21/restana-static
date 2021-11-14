@@ -3,6 +3,8 @@ name: 'build images'
 
 on:
   push:
+    release:
+      types: [published]
     branches:
       - master
 
