@@ -3,6 +3,7 @@
 
 Efficiently serve static files using Node.js and Docker containers: https://itnext.io/restana-static-serving-the-frontend-with-node-js-beyond-nginx-e45fdb2e49cb
 
+Example Dockerfile:
 ```Dockerfile
 FROM kyberneees/restana-static:latest
 RUN rm dist/index.html
@@ -10,7 +11,7 @@ RUN echo "Hello World!" >> dist/index.html
 ```
 
 # Configuration options
-restana-static image configuration is manage using the module: https://www.npmjs.com/package/config, so developers can manage multiple envirments if desired.  
+restana-static image configuration is managed using the https://www.npmjs.com/package/config module, so developers can manage multiple environments if desired.  
 
 The `/restana-static/config` directory should be populated/overwritten during image creation. 
 
@@ -49,7 +50,7 @@ LOGS_FORMAT
 
 # Adding static files
 The `/restana-static/dist` directory should be populated/overwritten during image creation. 
-> Please consider that default path will change if you overwrite the `distDirectory` config.
+> Please consider that default files path will change if you overwrite the `distDirectory` config.
 
 # Log formats
 Logs are provided by the module: https://www.npmjs.com/package/morgan  
