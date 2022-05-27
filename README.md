@@ -3,6 +3,7 @@
 
 Efficiently serve static files using Node.js and Docker containers: https://itnext.io/restana-static-serving-the-frontend-with-node-js-beyond-nginx-e45fdb2e49cb
 
+Example Dockerfile:
 ```Dockerfile
 FROM kyberneees/restana-static:latest
 RUN rm dist/index.html
