@@ -11,9 +11,7 @@ RUN echo "Hello World!" >> dist/index.html
 ```
 
 # Configuration options
-restana-static image configuration is managed using the https://www.npmjs.com/package/config module, so developers can manage multiple environments if desired.  
-
-The `/restana-static/config` directory should be populated/overwritten during image creation. 
+The HTTP server and runtime configuration can be managed using the https://www.npmjs.com/package/config module. The `/restana-static/config` directory should be populated/overwritten during image creation. 
 
 ## Default configuration: 
 ```json
