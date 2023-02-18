@@ -8,7 +8,7 @@ describe('Smoke - Environment based configuration', () => {
   let server
 
   it('should successfully start server - env based config', async () => {
-    process.env.PORT = 5000
+    process.env.PORT = 3003
     process.env.CACHE_ENABLED = false
     process.env.LOGS_ENABLED = false
 
